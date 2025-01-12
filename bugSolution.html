@@ -1,0 +1,10 @@
+The solution focuses on clarifying the order of responsive modifiers to ensure the expected behavior.  Instead of relying on implicit ordering, we use more specific directives to ensure that `lg` styles are applied only when the screen size is above lg, and not overriding `md` styles.
+
+```html
+<!-- bugSolution.html -->
+<div class="md:bg-red-500 lg:bg-blue-500">
+  <!-- Content -->
+</div>
+```
+
+By clarifying the precedence with more selective class application, Tailwind CSS will apply the correct styling based on screen size without the conflicting behavior.
